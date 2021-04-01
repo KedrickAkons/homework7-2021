@@ -65,3 +65,15 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
 });
 
+// Skip ahead 15 sec
+document.querySelector("#skip").addEventListener("click", function() {
+	console.log("Skip ahead");
+	video.currentTime+= 15
+	console.log(video.currentTime)
+	if (video.currentTime>= video.duration) {
+		video.currentTime=0
+		video.play()
+	}
+	console.log(video.currentTime)
+
+});
